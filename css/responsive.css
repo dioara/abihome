@@ -1,0 +1,239 @@
+/* 
+ * Abihomes Website - Responsive Styles
+ * Additional styles to ensure proper mobile responsiveness
+ */
+
+/* Ensure base responsive styles are working properly */
+@media (max-width: 992px) {
+  .container {
+    padding: 0 2rem;
+  }
+  
+  .hero {
+    padding: 6rem 0;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .section {
+    padding: 4rem 0;
+  }
+  
+  .about-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+  
+  .hero {
+    padding: 5rem 0;
+  }
+  
+  .hero h1 {
+    font-size: 2.25rem;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .hero-buttons .btn {
+    width: 100%;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .partners-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  
+  .floor-plan-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .hero {
+    padding: 4rem 0;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .section {
+    padding: 3rem 0;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  .section-title:after {
+    width: 60px;
+    height: 3px;
+  }
+  
+  .card {
+    margin-bottom: 1rem;
+  }
+  
+  footer .container {
+    padding: 0 1.5rem;
+  }
+  
+  .social-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Fix for navigation on mobile */
+@media (max-width: 768px) {
+  header {
+    padding: 0.75rem 0;
+  }
+  
+  .menu-toggle {
+    display: block;
+    z-index: 1001;
+  }
+  
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+  
+  nav.active {
+    transform: translateX(0);
+  }
+  
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  nav ul li a {
+    font-size: 1.25rem;
+  }
+}
+
+/* Form improvements for mobile */
+@media (max-width: 768px) {
+  .contact-form .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form select {
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+  
+  .contact-form button {
+    width: 100%;
+  }
+}
+
+/* Ensure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Improve touch targets for mobile */
+@media (max-width: 768px) {
+  .btn {
+    padding: 0.875rem 1.5rem;
+    min-height: 44px;
+  }
+  
+  nav ul li a {
+    padding: 0.5rem 1rem;
+    display: block;
+  }
+  
+  .social-links a {
+    width: 44px;
+    height: 44px;
+  }
+  
+  select, 
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    font-size: 16px; /* Prevents iOS zoom on focus */
+  }
+}
+
+/* Fix for project gallery on mobile */
+@media (max-width: 576px) {
+  .project-gallery .card-grid {
+    gap: 1rem;
+  }
+  
+  .project-gallery .card img {
+    height: 200px;
+    object-fit: cover;
+  }
+}
+
+/* Improve footer spacing on mobile */
+@media (max-width: 576px) {
+  footer {
+    padding: 2rem 0;
+  }
+  
+  footer p {
+    margin-bottom: 0.5rem;
+  }
+}
